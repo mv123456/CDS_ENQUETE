@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="5.0" client="site" method="upgrade">
+    <name>COM_CDSENQUETE</name>
+    <description>Component for managing surveys and enquetes</description>
+    <version>1.0.0</version>
+    <author>mv123456</author>
+    <creationDate>2026-03-17</creationDate>
+    <license>GNU General Public License version 2 or later</license>
+    <namespace path="src">Cdsenquete</namespace>
+    <scriptfile>script.php</scriptfile>
+    
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    
+    <files>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>script.php</filename>
+        <filename>cdsenquete.php</filename>
+    </files>
+    
+    <languages>
+        <language tag="en-GB">language/en-GB/com_cdsenquete.ini</language>
+        <language tag="en-GB">language/en-GB/com_cdsenquete.sys.ini</language>
+    </languages>
+</extension>
